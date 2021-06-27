@@ -1,0 +1,9 @@
+prepare:
+  image: debian:latest
+  TTL: 24 days
+  commands:
+    - apt update
+    - apt install neofetch -y
+
+script:
+  - neofetch

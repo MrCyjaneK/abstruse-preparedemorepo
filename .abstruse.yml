@@ -1,9 +1,9 @@
-prepare:
-  image: debian:latest
-  TTL: 24 days
-  commands:
-    - apt update
-    - apt install neofetch -y
+image: prepare/Dockerfile.debian
+
+matrix:
+  - image: prepare/Dockerfile.debian
+  - image: prepare/Dockerfile.ubuntu
+  - image: prepare/Dockerfile.arch
 
 script:
   - neofetch
